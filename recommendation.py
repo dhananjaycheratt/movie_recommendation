@@ -6,7 +6,7 @@ from fuzzywuzzy import process
 import re
 
 # Load the movies dataset
-movies_df = pd.read_csv(r"C:\Users\dhana\Downloads\ml-25m\ml-25m\movies.csv")
+movies_df = pd.read_csv("movies.csv")
 
 # Preprocess the movie titles for matching
 movies_df['processed_title'] = movies_df['title'].apply(lambda x: re.sub(r'[^\w\s]', '', x.lower()))
